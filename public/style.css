@@ -1,0 +1,439 @@
+/* 🌸 Falling Stars & Sakura Theme 🌌 */
+
+/* 1. Global Reset & Body Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Deep Night Sky Background */
+    background: #0d1a2f; /* Deep Navy/Indigo */
+    /* Optional: Subtle Texture/Stars */
+    /* background-image: url('stars.png'); */
+    min-height: 100vh;
+    padding: 2rem 0;
+}
+
+/* Sakura Pink Accent Color */
+:root {
+    --sakura-pink: #ffb6c1; /* Light Pink */
+    --sakura-deep: #e91e63; /* Deeper Pink for emphasis */
+    --night-blue: #1c2e4a;
+    --night-shadow: rgba(255, 182, 193, 0.15); /* Light pink shadow for glow effect */
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* 2. Header (Night Sky Banner) */
+header {
+    /* Richer, darker gradient for night sky */
+    background: linear-gradient(135deg, #1c2e4a 0%, #0d1a2f 100%);
+    color: white;
+    padding: 3rem 2rem;
+    text-align: center;
+    /* Soft, glowing shadow */
+    box-shadow: 0 8px 32px var(--night-shadow);
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    border-bottom: 4px solid var(--sakura-pink); /* Sakura accent line */
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    /* Text shadow to simulate soft glow */
+    text-shadow: 0 0 10px var(--sakura-pink), 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+header .subtitle {
+    font-size: 1rem;
+    opacity: 0.8;
+}
+
+/* 3. Section (Content Blocks) */
+section {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    color: #333;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    /* Sakura Pink underline */
+    border-bottom: 3px solid var(--sakura-pink);
+    padding-bottom: 0.75rem;
+}
+
+/* 4. Form Styles */
+form {
+    background: #fdf6f8; /* Very light pink/off-white for contrast */
+    padding: 2rem;
+    border-radius: 8px;
+    /* Sakura Pink Left Border */
+    border-left: 5px solid var(--sakura-pink);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #333;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 0.85rem;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    font-family: inherit;
+    background: #ffffff;
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    /* Focus with deep sakura pink */
+    border-color: var(--sakura-deep);
+    box-shadow: 0 0 0 3px rgba(255, 182, 193, 0.3);
+    background: #ffffff;
+}
+
+/* 5. Button Styles */
+button {
+    /* Sakura Pink Gradient */
+    background: linear-gradient(135deg, var(--sakura-pink) 0%, var(--sakura-deep) 100%);
+    color: white;
+    padding: 0.9rem 2rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    /* Sakura Shadow */
+    box-shadow: 0 4px 12px rgba(233, 30, 99, 0.4);
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(233, 30, 99, 0.6);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* Primary Button (Use Sakura Theme) */
+.btn-primary {
+    background: linear-gradient(135deg, var(--sakura-pink) 0%, var(--sakura-deep) 100%);
+    box-shadow: 0 4px 12px rgba(233, 30, 99, 0.4);
+}
+
+.btn-primary:hover {
+    box-shadow: 0 6px 20px rgba(233, 30, 99, 0.6);
+}
+
+.btn-sm {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+}
+
+/* Status Buttons - Keep original meaning but adjust gradient */
+.btn-success {
+    background: linear-gradient(135deg, #4caf50 0%, #388e3c 100%);
+    box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+}
+
+.btn-success:hover {
+    box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
+}
+
+.btn-warning {
+    background: linear-gradient(135deg, #ff9800 0%, #f57c00 100%);
+    box-shadow: 0 4px 12px rgba(255, 152, 0, 0.3);
+}
+
+.btn-warning:hover {
+    box-shadow: 0 6px 20px rgba(255, 152, 0, 0.4);
+}
+
+.btn-danger {
+    background: linear-gradient(135deg, #f44336 0%, #d32f2f 100%);
+    box-shadow: 0 4px 12px rgba(244, 67, 54, 0.3);
+}
+
+.btn-danger:hover {
+    box-shadow: 0 6px 20px rgba(244, 67, 54, 0.4);
+}
+
+/* 6. Task & Filter Section */
+.filter-section {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    /* Soft night blue background */
+    background: #e6eef8;
+    border-radius: 8px;
+    border: 1px solid var(--sakura-pink);
+}
+
+.filter-section label {
+    font-weight: 600;
+    color: #333;
+    white-space: nowrap;
+}
+
+.filter-section select {
+    flex: 1;
+    max-width: 250px;
+}
+
+.task-columns {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.task-column {
+    background: #fdf6f8; /* Lightest pink background for the column */
+    border-radius: 8px;
+    padding: 1.5rem;
+    /* Default Column border */
+    border-top: 4px solid var(--sakura-deep);
+    display: flex;
+    flex-direction: column;
+    min-height: 400px;
+}
+
+.column-header {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0 0 1.5rem 0;
+    color: var(--night-blue);
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid var(--sakura-pink);
+}
+
+/* Column Color Coding (Inspired by the original, but with clearer division) */
+.todo-header { border-top-color: #f57c00; } /* Orange/Warning - Unstarted */
+.progress-header { border-top-color: #2196f3; } /* Blue - In Progress */
+.done-header { border-top-color: #4caf50; } /* Green - Complete */
+
+.task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    flex: 1;
+}
+
+/* 7. Task Card (The "Petal") */
+.task-card {
+    background: white;
+    padding: 1.25rem;
+    border-radius: 8px;
+    /* Left border is the deep sakura accent */
+    border-left: 5px solid var(--sakura-deep);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.task-card:hover {
+    /* Lift and give a soft glow */
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px var(--night-shadow);
+    border-left-color: var(--sakura-pink);
+}
+
+.task-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.75rem;
+    gap: 0.75rem;
+}
+
+.task-title {
+    font-weight: 600;
+    font-size: 1.05rem;
+    color: #333;
+    flex: 1;
+    line-height: 1.3;
+    word-break: break-word;
+}
+
+/* Priority Badges (Kept for clarity) */
+.priority-badge {
+    display: inline-block;
+    padding: 0.3rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.priority-high {
+    background: #f8c0c0; /* Softer Red */
+    color: #a00000;
+}
+
+.priority-medium {
+    background: #ffe0b2; /* Lighter Orange */
+    color: #ef6c00;
+}
+
+.priority-low {
+    background: #e0f2f1; /* Mint Green */
+    color: #004d40;
+}
+
+.task-description {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
+}
+
+.task-meta {
+    font-size: 0.8rem;
+    color: #999;
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid #f0e6e6; /* Softer divider */
+}
+
+.task-actions {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+}
+
+.task-actions button {
+    padding: 0.6rem 0.75rem;
+    font-size: 0.85rem;
+    margin: 0;
+}
+
+/* 8. Footer */
+footer {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    color: #666;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    margin-top: 2rem;
+    border-top: 3px solid var(--sakura-pink);
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
+
+footer strong {
+    color: var(--sakura-deep); /* Highlight text with deep sakura */
+}
+
+/* 9. Loading/Spinner (Star-like effect) */
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Darker background to match night sky */
+    background: rgba(13, 26, 47, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1000;
+}
+
+.spinner {
+    /* Glowing Sakura Pink Spinner */
+    border: 4px solid rgba(255, 182, 193, 0.3);
+    border-top: 4px solid var(--sakura-pink);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin-bottom: 1rem;
+    /* Optional: Small glow around the spinner */
+    box-shadow: 0 0 10px var(--sakura-pink);
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.loading-overlay p {
+    color: var(--sakura-pink);
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-shadow: 0 0 5px rgba(255, 182, 193, 0.5);
+}
+
+.empty-state {
+    text-align: center;
+    color: #999;
+    padding: 2rem 1rem;
+    font-size: 0.95rem;
+}
+
+/* 10. Media Queries (Responsiveness) */
+
+@media (max-width: 1200px) {
+    .task-columns {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    .task-columns {
+        grid-template-columns: 1fr;
+    }
+
+    .filter-section {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .filter-section select {
+        max-width: none;
+    }
+
+    .task-column {
+        min-height: auto;
+    }
+
+    .task-actions {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
