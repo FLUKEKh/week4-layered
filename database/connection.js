@@ -1,4 +1,6 @@
 const sqlite3 = require("sqlite3").verbose();
+const fs = require("fs");
+const path = require("path");
 require("dotenv").config();
 
 class Database {
@@ -21,6 +23,25 @@ class Database {
         }
       });
     });
+  }
+
+  async initSchema() {
+    try {
+      const schemaPath = path.join(__dirname, 'schema.sql');
+      const schema = fs.readFileSync(schemaPath, 'utf-8');
+      
+      // Split by semicolons and execute each statement
+      const statements = schema.split(';').filter(stmt => stmt.trim());
+      
+      for (const statement of statements) {
+        await this.run(statement.trim());
+      }
+      
+      console.log("✅ เริ่มต้นสคีมาฐานข้อมูลสำเร็จ");
+    } catch (error) {
+      console.error("❌ ข้อผิดพลาดในการเริ่มต้นสคีมา:", error.message);
+      throw error;
+    }
   }
 
   getConnection() {

@@ -40,6 +40,9 @@ async function startServer() {
         // เชื่อมต่อฐานข้อมูล
         await database.connect();
         
+        // เริ่มต้นสคีมาฐานข้อมูล
+        await database.initSchema();
+        
         // เริ่ม Express server
         app.listen(PORT, () => {
             logger.info(`🚀 เซิร์ฟเวอร์ทำงานที่ http://localhost:${PORT}`);

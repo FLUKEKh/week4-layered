@@ -98,7 +98,7 @@ async function fetchTasks() {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
         const data = await response.json();
-        allTasks = data.tasks;
+        allTasks = data.data;
         renderTasks();
     } catch (error) {
         console.error('Error fetching tasks:', error);
@@ -148,7 +148,7 @@ async function createTask(taskData) {
 async function updateTaskStatus(taskId, newStatus) {
     showLoading();
     try {
-        const response = await fetch(`/api/tasks/${taskId}/status`, {
+        const response = await fetch(`/api/tasks/${taskId}/next-status`, {
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json'

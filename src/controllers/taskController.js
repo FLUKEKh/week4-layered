@@ -69,8 +69,8 @@ class TaskController {
             const taskData = {
                 title: req.body.title,
                 description: req.body.description,
-                status: req.body.status,
-                priority: req.body.priority,
+                status: req.body.status || 'TODO',
+                priority: req.body.priority || 'MEDIUM',
             };
 
             const task = await taskService.createTask(taskData);
