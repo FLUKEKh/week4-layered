@@ -148,8 +148,8 @@ async function createTask(taskData) {
 async function updateTaskStatus(taskId, newStatus) {
     showLoading();
     try {
-        const response = await fetch(`/api/tasks/${taskId}/next-status`, {
-            method: 'PATCH',
+        const response = await fetch(`/api/tasks/${taskId}`, {
+            method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
             },
